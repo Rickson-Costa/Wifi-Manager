@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Outer Shield Frame (Electric Cyan) -->
+    <path 
+        android:pathData="M54,14 L88,30 L88,62 C88,86 73,103 54,108 C35,103 20,86 20,62 L20,30 Z"
+        android:fillColor="#00F0FF" />
+
+    <!-- Inner Shield (Deep Slate) -->
+    <path 
+        android:pathData="M54,20 L82,33 L82,61 C82,82 69,96 54,101 C39,96 26,82 26,61 L26,33 Z"
+        android:fillColor="#15171C" />
+
+    <!-- Split lighting highlight on shield -->
+    <path 
+        android:pathData="M54,20 L82,33 L82,61 C82,82 69,96 54,101 Z"
+        android:fillColor="#1E222A" />
+
+    <!-- The Dot (Center Bottom of Radar) -->
+    <path
+        android:pathData="M 54 84 c -4.4 0 -8 -3.6 -8 -8 c 0 -4.4 3.6 -8 8 -8 c 4.4 0 8 3.6 8 8 c 0 4.4 -3.6 8 -8 8 Z"
+        android:fillColor="#00F0FF" />
+
+    <!-- Signal Arc 1 (Medium) -->
+    <path
+        android:pathData="M 38 64 C 47 55 61 55 70 64 L 75 59 C 63 47 45 47 33 59 Z"
+        android:fillColor="#FF3B30" />
+
+    <!-- Signal Arc 2 (Large) -->
+    <path
+        android:pathData="M 28 54 C 42 40 66 40 80 54 L 85 49 C 68 32 40 32 23 49 Z"
+        android:fillColor="#00F0FF" />
+</vector>

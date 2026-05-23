@@ -1,0 +1,6 @@
+{
+  "name": "WifiManager Pro",
+  "description": "Network scanning, device inventory, and security auditing tool with parental controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
