@@ -55,6 +55,13 @@ android {
     compose = true
     buildConfig = true
   }
+  
+  externalNativeBuild {
+    cmake {
+        path("src/main/cpp/CMakeLists.txt")
+        version = "3.22.1"
+    }
+  }
   testOptions { unitTests { isIncludeAndroidResources = true } }
 }
 

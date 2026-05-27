@@ -19,14 +19,10 @@ class MainActivity : ComponentActivity() {
     enableEdgeToEdge()
     setContent {
       MyApplicationTheme {
-        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
           val viewModel: NetworkViewModel = viewModel(
               factory = androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.getInstance(application)
           )
-          androidx.compose.foundation.layout.Box(modifier = Modifier.padding(innerPadding)) {
-              WifiManagerApp(viewModel = viewModel, context = this@MainActivity)
-          }
-        }
+          WifiManagerApp(viewModel = viewModel, context = this@MainActivity)
       }
     }
   }

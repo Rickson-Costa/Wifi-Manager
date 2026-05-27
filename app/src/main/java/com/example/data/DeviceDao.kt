@@ -11,7 +11,7 @@ interface DeviceDao {
     @Query("SELECT * FROM devices ORDER BY firstSeen DESC")
     fun getAllDevices(): Flow<List<NetworkDevice>>
     
-    @Query("SELECT * FROM devices WHERE networkId = :networkId OR networkId = '' ORDER BY firstSeen DESC")
+    @Query("SELECT * FROM devices WHERE networkId = :networkId ORDER BY firstSeen DESC")
     fun getAllDevicesByNetwork(networkId: String): Flow<List<NetworkDevice>>
 
     @Query("SELECT * FROM devices WHERE macAddress = :mac LIMIT 1")
@@ -29,11 +29,17 @@ interface DeviceDao {
     @Query("UPDATE devices SET customName = :name WHERE macAddress = :mac")
     suspend fun updateCustomName(mac: String, name: String)
 
-    @Query("SELECT COUNT(*) FROM devices WHERE isBlocked = 1 AND (networkId = :networkId OR networkId = '')")
+    @Query("SELECT COUNT(*) FROM devices WHERE isBlocked = 1 AND networkId = :networkId")
     fun getBlockedDeviceCount(networkId: String): Flow<Int>
     
-    @Query("SELECT COUNT(*) FROM devices WHERE networkId = :networkId OR networkId = ''")
+    @Query("SELECT COUNT(*) FROM devices WHERE networkId = :networkId")
     fun getTotalDeviceCount(networkId: String): Flow<Int>
+
+    @Query("UPDATE devices SET networkId = :newNetId WHERE networkId = :oldNetId")
+    suspend fun updateNetworkId(oldNetId: String, newNetId: String)
+
+    @Query("DELETE FROM devices WHERE macAddress LIKE 'IP-%'")
+    suspend fun deleteOldMockDevices()
 
     // Events
     @Query("SELECT * FROM network_events ORDER BY timestamp DESC")

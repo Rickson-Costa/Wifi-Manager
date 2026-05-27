@@ -13,13 +13,14 @@
                 android:startY="0"
                 android:endX="108"
                 android:endY="108">
-                <item android:color="#1A1C1F" android:offset="0" />
-                <item android:color="#000000" android:offset="1" />
+                <item android:color="#1B325A" android:offset="0" />
+                <item android:color="#0A1224" android:offset="1" />
             </gradient>
         </aapt:attr>
     </path>
-    <!-- Grid overlay mimicking network visualization -->
-    <path android:pathData="M0,27 L108,27 M0,54 L108,54 M0,81 L108,81 M27,0 L27,108 M54,0 L54,108 M81,0 L81,108" 
-        android:strokeColor="#1900F0FF" 
-        android:strokeWidth="1"/>
+    <!-- Overlay mimicking the circular brushed metal texture edge -->
+    <path android:pathData="M10,54 A44,44 0 1,1 98,54 A44,44 0 1,1 10,54" 
+        android:strokeColor="#FFFFFF" 
+        android:strokeAlpha="0.05"
+        android:strokeWidth="10"/>
 </vector>

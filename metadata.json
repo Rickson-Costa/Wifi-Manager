@@ -1,5 +1,5 @@
 {
-  "name": "WifiManager Pro",
+  "name": "Rede Block",
   "description": "Network scanning, device inventory, and security auditing tool with parental controls.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

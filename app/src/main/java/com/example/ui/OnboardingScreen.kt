@@ -32,7 +32,7 @@ fun OnboardingScreen(onAccept: () -> Unit) {
             )
             Spacer(modifier = Modifier.height(24.dp))
             Text(
-                "WifiManager Pro",
+                "Rede Block",
                 style = MaterialTheme.typography.headlineMedium,
                 color = MaterialTheme.colorScheme.onBackground,
                 fontWeight = FontWeight.Bold

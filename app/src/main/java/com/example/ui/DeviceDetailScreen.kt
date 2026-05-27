@@ -131,7 +131,8 @@ fun DeviceDetailScreen(mac: String, viewModel: NetworkViewModel, onBack: () -> U
                                 }
                             }
                             Spacer(modifier = Modifier.height(12.dp))
-                            Text("IP: ${d.lastIp}", color = colorElectricCyan, fontFamily = FontFamily.Monospace, fontSize = 12.sp)
+                            Text("IP:  ${d.lastIp}", color = colorElectricCyan, fontFamily = FontFamily.Monospace, fontSize = 12.sp)
+                            Text("MAC: ${d.macAddress.uppercase()}", color = colorMutedSilver, fontFamily = FontFamily.Monospace, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp))
                             Text("FABRICANTE: ${d.vendor.uppercase()}", color = colorMutedSilver, fontSize = 10.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.sp, modifier = Modifier.padding(top = 12.dp))
                         }
                     }
